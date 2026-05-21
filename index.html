@@ -28,7 +28,7 @@
         window.a = document.getElementsByTagName('canvas')[0];
         window.c = window.a.getContext('2d');
         window.d = document;
-        document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+        document.body.clientWidth; 
 
     a.width=1024;function f(){return Math.random()}
 function g(b,e,n){var r=f(),m=d.createElement("canvas"),t=m.getContext("2d"),D=2*b,H=t.createLinearGradient(0,b,0,D),x=20*n,y=0,v,E;n=r;m.height=150;m.width=199*x;for(r=0;r<e.length;r++)H.addColorStop(r/e.length,e[r]);t.fillStyle=H;n+=Math.sin(n);t.beginPath();t.moveTo(0,D+100*Math.sin(n));for(e=0;199>=e;e++)E=e*x,t.lineTo(E,b+Math.sin(++n*Math.sin(n+e))*x);t.lineTo(E,D);t.fill();t.closePath();v=m.width-x;m.a=function(b){b*=2.85;var e=m.width-2*x;y-=b;v-=b;y<=-m.width&&(y=e);v<=-m.width&&(v=e);c.drawImage(m,
